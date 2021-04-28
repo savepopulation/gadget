@@ -42,7 +42,9 @@ object Versions {
     const val multiDexVersion = "2.0.1"
     const val javaxAnnotationVersion = "10.0-b28"
 
-    // Firebase Versions
+    /*
+     * Firebase Versions
+     */
     const val firebaseAnalyticsVersion = "17.5.0"
     const val tagManagerVersion = "16.0.8"
 
