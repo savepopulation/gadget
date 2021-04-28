@@ -2,6 +2,7 @@
  * Config
  * Contains the configuration of the project
  */
+
 object Config {
     const val applicationId = "com.raqun.gadget"
     const val minSdkVersion = Versions.minSdkVersion

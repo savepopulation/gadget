@@ -1,9 +1,10 @@
-import org.gradle.api.JavaVersion
-
 /*
  * Versions
  * Contains the versions of the project configuration and dependency versions
  */
+
+import org.gradle.api.JavaVersion
+
 object Versions {
     /*
      * Sdk Versions
