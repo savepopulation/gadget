@@ -1,0 +1,61 @@
+apply plugin: Plugins.kotlinAndroid
+apply plugin: Plugins.kotlinAndroidExtensions
+apply plugin: Plugins.kotlinKapt
+apply from: "$rootDir/test-dependencies.gradle"
+
+android {
+    compileSdkVersion Config.compileSdkVersion
+    buildToolsVersion Config.buildToolsVersion
+
+    defaultConfig {
+        versionName Config.versionName
+        versionCode Config.versionCode
+        minSdkVersion Config.minSdkVersion
+        targetSdkVersion Config.targetSdkVersion
+        minSdkVersion Config.minSdkVersion
+        targetSdkVersion Config.targetSdkVersion
+        testInstrumentationRunner Config.testInstrumentationRunner
+    }
+
+    compileOptions {
+        sourceCompatibility Versions.sourceCompatibilityVersion
+        targetCompatibility Versions.targetCompatibilityVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            // no-op
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation CoreLibraries.kotlin
+    compileOnly Libraries.javaxAnnotation
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'org.jetbrains.kotlin') {
+            details.useVersion Versions.kotlinVersion
+        } else if (requested.group == 'com.android.support') {
+            details.useVersion Versions.appCompatVersion
+        }
+    }
+}
