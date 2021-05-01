@@ -1,0 +1,3 @@
+apply plugin: Plugins.androidLibrary
+apply from: "$rootDir/common.gradle"
+apply from: "$rootDir/gradle-mvn-push.gradle"
