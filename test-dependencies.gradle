@@ -1,0 +1,15 @@
+dependencies {
+    testImplementation TestLibraries.jUnit
+    androidTestImplementation TestLibraries.runnner
+    androidTestImplementation TestLibraries.espressoCore
+    debugImplementation TestLibraries.fragmentTesting
+    androidTestImplementation TestLibraries.testRules
+    androidTestImplementation TestLibraries.testCore
+    androidTestImplementation TestLibraries.jUnitKtx
+    androidTestImplementation TestLibraries.mockK
+    testImplementation TestLibraries.truthExt
+    testImplementation TestLibraries.truth
+    testImplementation TestLibraries.mockK
+    testImplementation TestLibraries.coreTesting
+    testImplementation TestLibraries.robolectric
+}
