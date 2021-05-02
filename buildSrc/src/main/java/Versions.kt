@@ -25,7 +25,7 @@ object Versions {
      */
     const val buildToolsVersion = "29.0.2"
     const val gradleVersion = "4.1.1"
-    const val kotlinVersion = "1.4.10"
+    const val kotlinVersion = "1.4.32"
     const val jUnitVersion = "4.12"
     const val testRunnerVersion = "1.1.1"
     const val espressoCoreVersion = "3.1.0"
