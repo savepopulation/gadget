@@ -4,7 +4,12 @@
  */
 object Modules {
     /*
-     * App
+     * Application module
      */
     const val app = ":app"
+
+    /*
+     * Gadget Library module
+     */
+    const val lib = ":lib"
 }
