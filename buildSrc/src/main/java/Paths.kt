@@ -8,4 +8,8 @@ object Paths {
         "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
     const val googleServicesClasspath =
         "com.google.gms:google-services:${Versions.googleServicesPluginVersion}"
+    const val firebaseCrashlyticsPath =
+        "com.google.firebase:firebase-crashlytics-gradle:${Versions.firebaseCrashlyticsPluginVersion}"
+    const val firebasePerformancefClasspath =
+        "com.google.firebase:perf-plugin:${Versions.firebasePerformancePluginVersion}"
 }

@@ -52,4 +52,6 @@ object Versions {
      * Plugin Versions
      */
     const val googleServicesPluginVersion = "4.3.3"
+    const val firebasePerformancePluginVersion = "1.3.1"
+    const val firebaseCrashlyticsPluginVersion = "2.4.1"
 }

@@ -1,5 +1,8 @@
 apply plugin: Plugins.androidApplication
 apply from: "$rootDir/common.gradle"
+apply plugin: Plugins.googleServices
+apply plugin: Plugins.firebaseCrashlytics
+apply plugin: Plugins.firebasePerformance
 
 android {
 

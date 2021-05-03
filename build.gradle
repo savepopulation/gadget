@@ -9,6 +9,9 @@ buildscript {
     dependencies {
         classpath Paths.gradleClasspath
         classpath Paths.kotlinGradlePluginClasspath
+        classpath Paths.googleServicesClasspath
+        classpath Paths.firebaseCrashlyticsPath
+        classpath Paths.firebasePerformancefClasspath
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
