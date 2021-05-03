@@ -11,4 +11,6 @@ object Plugins {
     const val kotlinKapt = "kotlin-kapt"
     const val detekt = "io.gitlab.arturbosch.detekt"
     const val googleServices = "com.google.gms.google-services"
+    const val firebaseCrashlytics = "com.google.firebase.crashlytics"
+    const val firebasePerformance = "com.google.firebase.firebase-perf"
 }
