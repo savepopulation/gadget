@@ -1,6 +1,7 @@
 package com.raqun.gadget.lib.event
 
 import android.os.Bundle
+import com.raqun.gadget.lib.extensions.put
 
 /*
  * Firebase Event
@@ -12,9 +13,9 @@ interface FirebaseEvent : Event {
      */
     fun toBundle(): Bundle {
         val bundle = Bundle()
-        if (this.params.isNotEmpty()) {
+        if (params.isNotEmpty()) {
             for (param in this.params) {
-                // TODO put params to bundle
+                bundle.put(param.key, param.value)
             }
         }
 
