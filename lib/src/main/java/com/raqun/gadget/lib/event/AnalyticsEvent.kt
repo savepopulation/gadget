@@ -6,7 +6,6 @@ package com.raqun.gadget.lib.event
  * Ideally, an event should be tracked to Firebase by default.
  */
 abstract class AnalyticsEvent(
-    override val name: String,
     initialParams: Map<String, Any?>? = null
 ) : FirebaseEvent {
     /*
