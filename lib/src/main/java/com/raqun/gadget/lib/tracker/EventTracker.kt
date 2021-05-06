@@ -10,5 +10,5 @@ interface EventTracker {
      * Tracking function
      * Tracks the given event
      */
-    fun track(ev: Event)
+    fun track(event: Event)
 }

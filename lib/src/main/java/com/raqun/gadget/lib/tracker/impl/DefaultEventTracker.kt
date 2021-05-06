@@ -5,7 +5,7 @@ import com.raqun.gadget.lib.tracker.EventTracker
 
 open class DefaultEventTracker(private val firebaseEventTracker: EventTracker) : EventTracker {
 
-    override fun track(ev: Event) {
-        firebaseEventTracker.track(ev)
+    override fun track(event: Event) {
+        firebaseEventTracker.track(event)
     }
 }

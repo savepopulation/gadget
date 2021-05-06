@@ -15,5 +15,5 @@ interface AnalyticsTracker {
     /*
      * Event tracking method
      */
-    fun track(ev: Event, eventTracker: EventTracker? = null)
+    fun track(event: Event, eventTracker: EventTracker? = null)
 }

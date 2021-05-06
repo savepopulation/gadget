@@ -23,7 +23,7 @@ object Gadget : AnalyticsTracker {
         }
     }
 
-    override fun track(ev: Event, eventTracker: EventTracker?) {
-        eventTracker?.track(ev) ?: defaultEventTracker.track(ev)
+    override fun track(event: Event, eventTracker: EventTracker?) {
+        eventTracker?.track(event) ?: defaultEventTracker.track(event)
     }
 }

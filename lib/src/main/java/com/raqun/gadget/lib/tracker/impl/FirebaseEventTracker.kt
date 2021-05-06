@@ -7,9 +7,9 @@ import com.raqun.gadget.lib.tracker.EventTracker
 
 open class FirebaseEventTracker(private val firebaseAnalytics: FirebaseAnalytics) : EventTracker {
 
-    override fun track(ev: Event) {
-        if (ev is FirebaseEvent) {
-            firebaseAnalytics.logEvent(ev.name, ev.toBundle())
+    override fun track(event: Event) {
+        if (event is FirebaseEvent) {
+            firebaseAnalytics.logEvent(event.name, event.toBundle())
         }
     }
 }
