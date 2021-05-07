@@ -9,12 +9,18 @@ class Constants private constructor() {
      */
     object Event {
         const val CLICK = "click"
+        const val API_ERROR = "api_error"
     }
 
     /*
      * Contains parameter names
      */
     object Param {
-        const val IDENTIFIER = "id"
+        const val CODE = "code"
+        const val MESSAGE = "message"
+        const val TYPE = "type"
+        const val SCREEN_NAME = "screen_name"
+        const val ENDPOINT = "endpoint"
+        const val CLASS = "class"
     }
 }
