@@ -9,7 +9,11 @@ class Constants private constructor() {
      */
     object Event {
         const val CLICK = "click"
-        const val API_ERROR = "api_error"
+
+        object Error {
+            const val API_ERROR = "api_error"
+            const val BUSINESS_ERROR = "business_error"
+        }
     }
 
     /*
