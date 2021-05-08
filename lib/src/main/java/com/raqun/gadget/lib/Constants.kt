@@ -25,6 +25,7 @@ class Constants private constructor() {
         const val TYPE = "type"
         const val SCREEN_NAME = "screen_name"
         const val ENDPOINT = "endpoint"
-        const val CLASS = "class"
+        const val CLASS = "class_name"
+        const val IS_VALID = "is_Valid"
     }
 }
