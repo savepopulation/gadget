@@ -10,6 +10,7 @@ class Constants private constructor() {
     object Event {
         const val CLICK = "click"
         const val FOCUS_IN = "focus_in"
+        const val FOCUS_OUT = "focus_out"
 
         object Error {
             const val API_ERROR = "api_error"
