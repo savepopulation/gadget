@@ -11,6 +11,7 @@ class Constants private constructor() {
         const val CLICK = "click"
         const val FOCUS_IN = "focus_in"
         const val FOCUS_OUT = "focus_out"
+        const val SWITCH = "switch"
 
         object Error {
             const val API_ERROR = "api_error"
@@ -27,7 +28,8 @@ class Constants private constructor() {
         const val TYPE = "type"
         const val SCREEN_NAME = "screen_name"
         const val ENDPOINT = "endpoint"
-        const val CLASS = "class_name"
+        const val CLASS_NAME = "class_name"
         const val IS_VALID = "is_Valid"
+        const val STATUS = "status"
     }
 }
