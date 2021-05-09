@@ -12,6 +12,7 @@ class Constants private constructor() {
         const val FOCUS_IN = "focus_in"
         const val FOCUS_OUT = "focus_out"
         const val SWITCH = "switch"
+        const val TAB_SELECTION = "tab_selection"
 
         object Error {
             const val API_ERROR = "api_error"
@@ -23,6 +24,8 @@ class Constants private constructor() {
      * Contains parameter names
      */
     object Param {
+        const val NAME = "name"
+        const val POSITION = "position"
         const val CODE = "code"
         const val MESSAGE = "message"
         const val TYPE = "type"
