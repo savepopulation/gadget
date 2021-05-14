@@ -1,7 +1,5 @@
 package com.raqun.gadget.lib.domain
 
-typealias ProductMapper = (Any?) -> Product?
-
 /*
  * Product data class that will be tracked wit EEC Events
  */
