@@ -5,6 +5,8 @@ import androidx.arch.core.util.Function
 /*
  * List Item Tracker
  * Used for tracking impression or selection of items in a list
+ * Measure product impressions by logging event with an ITEM_LIST parameter
+ * and one or more items (i.e. products) defined with the relevant fields.
  */
 interface ListItemTracker<T> {
     /*
@@ -37,6 +39,8 @@ interface ListItemTracker<T> {
 
     /*
      * Tracks selection of an item in a list
+     * Measure product clicks by logging a SELECT_CONTENT event
+     * with an item (i.e. product) defined with the relevant fields:
      */
     fun trackItemSelection(item: T)
 
