@@ -22,7 +22,7 @@ data class AddToCartEvent(
 
     override fun toBundle(): Bundle {
         return Bundle().apply {
-            put(Constants.Param.ITEMS, product.toBundle().putQuantity(quantity))
+            put(FirebaseAnalytics.Param.ITEMS, product.toBundle().putQuantity(quantity))
         }
     }
 }

@@ -34,6 +34,5 @@ class Constants private constructor() {
         const val CLASS_NAME = "class_name"
         const val IS_VALID = "is_Valid"
         const val STATUS = "status"
-        const val ITEMS = "items"
     }
 }

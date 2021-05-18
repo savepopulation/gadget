@@ -12,4 +12,5 @@ data class Product(
     val price: Double?,
     val currency: String?,
     val index: Int? = null
+    val quantity: Long? = null
 )
