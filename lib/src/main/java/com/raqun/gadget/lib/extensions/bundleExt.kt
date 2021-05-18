@@ -54,3 +54,11 @@ fun Product.toBundle(): Bundle {
         put(FirebaseAnalytics.Param.INDEX, index)
     }
 }
+
+/*
+ * Puts quantity to the bundle
+ */
+fun Bundle.putQuantity(quantity: Long = 1): Bundle {
+    put(FirebaseAnalytics.Param.QUANTITY, quantity)
+    return this
+}
