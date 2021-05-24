@@ -1,4 +1,4 @@
-package com.raqun.gadget.lib.domain
+package com.raqun.gadget.lib.model
 
 /*
  * Product data class that will be tracked wit EEC Events

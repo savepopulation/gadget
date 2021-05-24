@@ -6,7 +6,6 @@ package com.raqun.gadget.lib.extensions
 import android.os.Bundle
 import android.os.Parcelable
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.raqun.gadget.lib.domain.Product
 import java.io.Serializable
 import java.util.Date
 

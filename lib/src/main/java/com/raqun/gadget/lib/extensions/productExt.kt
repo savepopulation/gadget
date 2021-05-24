@@ -2,7 +2,7 @@ package com.raqun.gadget.lib.extensions
 
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.raqun.gadget.lib.domain.Product
+import com.raqun.gadget.lib.model.Product
 
 /*
  * Puts product to a bundle for logging to Firebase

@@ -2,7 +2,7 @@ package com.raqun.gadget.lib.event.eec
 
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.raqun.gadget.lib.domain.Product
+import com.raqun.gadget.lib.model.Product
 import com.raqun.gadget.lib.event.AnalyticsEvent
 import com.raqun.gadget.lib.extensions.put
 import com.raqun.gadget.lib.extensions.toBundle

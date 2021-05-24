@@ -1,6 +1,6 @@
 package com.raqun.gadget.lib.event.eec
 
-import com.raqun.gadget.lib.domain.Promotion
+import com.raqun.gadget.lib.model.Promotion
 import com.raqun.gadget.lib.event.AnalyticsEvent
 
 /*
@@ -11,4 +11,6 @@ import com.raqun.gadget.lib.event.AnalyticsEvent
 data class PromotionImpressionEvent(
     override val name: String,
     private val promotions: List<Promotion>
-) : AnalyticsEvent(), EecEvent
+) : AnalyticsEvent(), EecEvent {
+
+}
