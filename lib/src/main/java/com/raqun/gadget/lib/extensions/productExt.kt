@@ -3,6 +3,7 @@ package com.raqun.gadget.lib.extensions
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.raqun.gadget.lib.model.Product
+import com.raqun.gadget.lib.model.RefundedProduct
 
 /*
  * Puts product to a bundle for logging to Firebase
@@ -33,4 +34,25 @@ fun List<Product>.toBundleList(putIndex: Boolean = false): ArrayList<Bundle> {
         productBundleList.add(productBundle)
     }
     return productBundleList
+}
+
+/*
+ * Puts refunded product to bundle
+ */
+fun RefundedProduct.toBundle(): Bundle {
+    return Bundle().apply {
+        put(FirebaseAnalytics.Param.ITEM_ID, id)
+        put(FirebaseAnalytics.Param.QUANTITY, quantity)
+    }
+}
+
+/*
+ * Puts list of refunded products into bundle
+ */
+fun List<RefundedProduct>.toBundleList(): ArrayList<Bundle> {
+    val refundedProductBundleList = ArrayList<Bundle>()
+    this.forEach {
+        refundedProductBundleList.add(it.toBundle())
+    }
+    return refundedProductBundleList
 }
