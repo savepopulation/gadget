@@ -1,7 +1,11 @@
 package com.raqun.gadget.lib.event.eec
 
+import android.os.Bundle
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.raqun.gadget.lib.Constants
 import com.raqun.gadget.lib.model.Promotion
 import com.raqun.gadget.lib.event.AnalyticsEvent
+import com.raqun.gadget.lib.extensions.toBundle
 
 /*
  * Promotion Impression Event
@@ -13,4 +17,9 @@ data class PromotionImpressionEvent(
     private val promotions: List<Promotion>
 ) : AnalyticsEvent(), EecEvent {
 
+    override fun toBundle(): Bundle {
+        return Bundle().apply {
+            putParcelableArrayList(Constants.Param.POSITION, promotions.toBundle())
+        }
+    }
 }
