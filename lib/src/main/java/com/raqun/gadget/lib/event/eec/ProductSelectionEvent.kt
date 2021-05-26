@@ -5,7 +5,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.raqun.gadget.lib.model.Product
 import com.raqun.gadget.lib.event.AnalyticsEvent
 import com.raqun.gadget.lib.extensions.put
-import com.raqun.gadget.lib.extensions.toBundle
+import com.raqun.gadget.lib.extensions.toBundleList
 
 data class ProductSelectionEvent(
     override val name: String = FirebaseAnalytics.Event.SELECT_CONTENT,
@@ -16,7 +16,7 @@ data class ProductSelectionEvent(
     // TODO put index in item list tracker implementation
     override fun toBundle(): Bundle {
         return Bundle().apply {
-            put(FirebaseAnalytics.Param.ITEMS, product.toBundle())
+            put(FirebaseAnalytics.Param.ITEMS, product.toBundleList())
         }
     }
 }

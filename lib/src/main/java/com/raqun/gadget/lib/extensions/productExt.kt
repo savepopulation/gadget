@@ -7,7 +7,7 @@ import com.raqun.gadget.lib.model.Product
 /*
  * Puts product to a bundle for logging to Firebase
  */
-fun Product.toBundle(): Bundle {
+fun Product.toBundleList(): Bundle {
     return Bundle().apply {
         put(FirebaseAnalytics.Param.ITEM_ID, id)
         put(FirebaseAnalytics.Param.ITEM_NAME, name)
@@ -26,7 +26,7 @@ fun Product.toBundle(): Bundle {
 fun List<Product>.toBundleList(putIndex: Boolean = false): ArrayList<Bundle> {
     val productBundleList = ArrayList<Bundle>()
     this.forEachIndexed { index, product ->
-        val productBundle = product.toBundle()
+        val productBundle = product.toBundleList()
         if (putIndex) {
             productBundle.putIndex(index.toLong())
         }

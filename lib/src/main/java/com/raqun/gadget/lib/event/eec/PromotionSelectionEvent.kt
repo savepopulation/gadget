@@ -5,7 +5,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.raqun.gadget.lib.Constants
 import com.raqun.gadget.lib.event.AnalyticsEvent
 import com.raqun.gadget.lib.extensions.put
-import com.raqun.gadget.lib.extensions.toBundle
+import com.raqun.gadget.lib.extensions.toBundleList
 import com.raqun.gadget.lib.model.Promotion
 
 /*
@@ -22,7 +22,7 @@ data class PromotionSelectionEvent(
 
     override fun toBundle(): Bundle {
         return Bundle().apply {
-            putParcelableArrayList(Constants.Param.PROMOTIONS, promotions.toBundle())
+            putParcelableArrayList(Constants.Param.PROMOTIONS, promotions.toBundleList())
             put(FirebaseAnalytics.Param.ITEM_ID, promotionId)
             put(FirebaseAnalytics.Param.CONTENT_TYPE, contentType)
         }

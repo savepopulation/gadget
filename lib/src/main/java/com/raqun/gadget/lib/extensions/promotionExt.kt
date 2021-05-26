@@ -7,7 +7,7 @@ import com.raqun.gadget.lib.model.Promotion
 /*
  * Maps Promotion to Bundle
  */
-fun Promotion.toBundle(): Bundle {
+fun Promotion.toBundleList(): Bundle {
     return Bundle().apply {
         put(FirebaseAnalytics.Param.ITEM_ID, id)
         put(FirebaseAnalytics.Param.ITEM_NAME, name)
@@ -19,10 +19,10 @@ fun Promotion.toBundle(): Bundle {
 /*
  * Maps the promotion list to bundle list
  */
-fun List<Promotion>.toBundle(): ArrayList<Bundle> {
+fun List<Promotion>.toBundleList(): ArrayList<Bundle> {
     val promotionsBundle = ArrayList<Bundle>()
     this.forEach {
-        promotionsBundle.add(it.toBundle())
+        promotionsBundle.add(it.toBundleList())
     }
 
     return promotionsBundle

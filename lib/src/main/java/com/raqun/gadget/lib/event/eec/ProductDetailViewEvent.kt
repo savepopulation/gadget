@@ -5,7 +5,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.raqun.gadget.lib.model.Product
 import com.raqun.gadget.lib.event.AnalyticsEvent
 import com.raqun.gadget.lib.extensions.put
-import com.raqun.gadget.lib.extensions.toBundle
+import com.raqun.gadget.lib.extensions.toBundleList
 
 /*
  * Product Detail View Event
@@ -19,7 +19,7 @@ data class ProductDetailViewEvent(
 
     override fun toBundle(): Bundle {
         return Bundle().apply {
-            put(FirebaseAnalytics.Param.ITEMS, product.toBundle())
+            put(FirebaseAnalytics.Param.ITEMS, product.toBundleList())
         }
     }
 }

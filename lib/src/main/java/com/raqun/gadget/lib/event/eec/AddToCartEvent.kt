@@ -6,7 +6,7 @@ import com.raqun.gadget.lib.model.Product
 import com.raqun.gadget.lib.event.AnalyticsEvent
 import com.raqun.gadget.lib.extensions.put
 import com.raqun.gadget.lib.extensions.putQuantity
-import com.raqun.gadget.lib.extensions.toBundle
+import com.raqun.gadget.lib.extensions.toBundleList
 
 /*
  * Add to Cart Event
@@ -21,7 +21,7 @@ data class AddToCartEvent(
 
     override fun toBundle(): Bundle {
         return Bundle().apply {
-            put(FirebaseAnalytics.Param.ITEMS, product.toBundle().putQuantity(quantity))
+            put(FirebaseAnalytics.Param.ITEMS, product.toBundleList().putQuantity(quantity))
         }
     }
 }
