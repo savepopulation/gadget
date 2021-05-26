@@ -1,5 +1,6 @@
 package com.raqun.gadget.lib.event.eec
 
+import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.raqun.gadget.lib.event.AnalyticsEvent
 
@@ -11,4 +12,11 @@ import com.raqun.gadget.lib.event.AnalyticsEvent
  */
 data class RefundEvent(
     override val name: String = FirebaseAnalytics.Event.REFUND
-) : AnalyticsEvent(), EecEvent
+) : AnalyticsEvent(), EecEvent {
+
+    override fun toBundle(): Bundle {
+        return Bundle().apply {
+
+        }
+    }
+}
