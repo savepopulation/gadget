@@ -15,3 +15,15 @@ fun Promotion.toBundle(): Bundle {
         put(FirebaseAnalytics.Param.CREATIVE_SLOT, creativeSlot)
     }
 }
+
+/*
+ * Maps the promotion list to bundle list
+ */
+fun List<Promotion>.toBundle(): ArrayList<Bundle> {
+    val promotionsBundle = ArrayList<Bundle>()
+    this.forEach {
+        promotionsBundle.add(it.toBundle())
+    }
+
+    return promotionsBundle
+}
