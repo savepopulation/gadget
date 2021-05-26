@@ -8,7 +8,7 @@ import com.raqun.gadget.lib.model.RefundedProduct
 /*
  * Puts product to a bundle for logging to Firebase
  */
-fun Product.toBundleList(): Bundle {
+fun Product.toBundle(q: Long? = null): Bundle {
     return Bundle().apply {
         put(FirebaseAnalytics.Param.ITEM_ID, id)
         put(FirebaseAnalytics.Param.ITEM_NAME, name)
@@ -17,7 +17,7 @@ fun Product.toBundleList(): Bundle {
         put(FirebaseAnalytics.Param.PRICE, price)
         put(FirebaseAnalytics.Param.CURRENCY, currency)
         put(FirebaseAnalytics.Param.ITEM_VARIANT, variant)
-        put(FirebaseAnalytics.Param.INDEX, index)
+        put(FirebaseAnalytics.Param.QUANTITY, quantity ?: q)
     }
 }
 
@@ -27,7 +27,7 @@ fun Product.toBundleList(): Bundle {
 fun List<Product>.toBundleList(putIndex: Boolean = false): ArrayList<Bundle> {
     val productBundleList = ArrayList<Bundle>()
     this.forEachIndexed { index, product ->
-        val productBundle = product.toBundleList()
+        val productBundle = product.toBundle()
         if (putIndex) {
             productBundle.putIndex(index.toLong())
         }

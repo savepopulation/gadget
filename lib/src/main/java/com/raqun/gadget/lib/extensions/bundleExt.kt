@@ -38,17 +38,8 @@ fun <T> Bundle.put(key: String, value: T?) {
     }
 }
 
-
 /*
- * Puts quantity to the bundle
- */
-fun Bundle.putQuantity(quantity: Long = 1): Bundle {
-    put(FirebaseAnalytics.Param.QUANTITY, quantity)
-    return this
-}
-
-/*
- * Puts Index to the bundşe
+ * Puts Index to the bundle
  */
 fun Bundle.putIndex(index: Long): Bundle {
     put(FirebaseAnalytics.Param.INDEX, index)
