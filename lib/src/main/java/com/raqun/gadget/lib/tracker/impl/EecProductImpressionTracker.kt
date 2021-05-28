@@ -13,14 +13,14 @@ import com.raqun.gadget.lib.tracker.LifecycleEventTracker
 
 /*
  * EEC Product Impression Tracker
- * Used to track product impressions for EEC
+ * Can be used to track product impressions and selections for EEC
  */
 class EecProductImpressionTracker(
     override val lifeCycle: Lifecycle,
     override val viewedItems: LinkedHashSet<Product> = linkedSetOf(),
     override val analyticsTracker: AnalyticsTracker,
-    override val eventName: String = FirebaseAnalytics.Event.VIEW_ITEM_LIST,
-    override val listName: String
+    private val eventName: String = FirebaseAnalytics.Event.VIEW_ITEM_LIST,
+    private val listName: String
 ) : ListItemImpressionTracker<Product>,
     LifecycleObserver,
     LifecycleEventTracker {
@@ -41,7 +41,8 @@ class EecProductImpressionTracker(
     override fun trackImpression() {
         if (viewedItems.isNullOrEmpty()) return
         val productImpressionEvent = ProductImpressionEvent(
-            itemListName = eventName,
+            name = eventName,
+            itemListName = listName,
             products = viewedItems.toList()
         )
         analyticsTracker.track(productImpressionEvent)

@@ -20,16 +20,6 @@ interface ListItemImpressionTracker<T> {
     val viewedItems: MutableSet<T>
 
     /*
-     * Event Name
-     */
-    val eventName: String
-
-    /*
-     * Name of the list
-     */
-    val listName: String
-
-    /*
      * Function to track item impression
      * Call when item is viewed
      */
