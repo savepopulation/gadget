@@ -4,6 +4,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.raqun.gadget.lib.Gadget
 import com.raqun.gadget.lib.event.eec.ProductImpressionEvent
 import com.raqun.gadget.lib.event.eec.ProductSelectionEvent
 import com.raqun.gadget.lib.model.Product
@@ -18,7 +19,7 @@ import com.raqun.gadget.lib.tracker.LifecycleEventTracker
 class EecProductImpressionTracker(
     override val lifeCycle: Lifecycle,
     override val viewedItems: LinkedHashSet<Product> = linkedSetOf(),
-    override val analyticsTracker: AnalyticsTracker,
+    override val analyticsTracker: AnalyticsTracker = Gadget,
     private val eventName: String = FirebaseAnalytics.Event.VIEW_ITEM_LIST,
     private val listName: String
 ) : ListItemImpressionTracker<Product>,

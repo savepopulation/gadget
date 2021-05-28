@@ -1,5 +1,6 @@
 package com.raqun.gadget.lib.tracker.impl
 
+import com.raqun.gadget.lib.Gadget
 import com.raqun.gadget.lib.event.eec.PromotionImpressionEvent
 import com.raqun.gadget.lib.event.eec.PromotionSelectionEvent
 import com.raqun.gadget.lib.model.Promotion
@@ -11,7 +12,7 @@ import com.raqun.gadget.lib.tracker.ListItemImpressionTracker
  * Can be used to track promotion impressions and selections for EEC
  */
 class EecPromotionImpressionTracker(
-    override val analyticsTracker: AnalyticsTracker,
+    override val analyticsTracker: AnalyticsTracker = Gadget,
     override val viewedItems: LinkedHashSet<Promotion> = linkedSetOf(),
     private val eventName: String,
     private val contentType: String
