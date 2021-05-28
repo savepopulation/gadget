@@ -8,7 +8,7 @@ import androidx.arch.core.util.Function
  * Measure product impressions by logging event with an ITEM_LIST parameter
  * and one or more items (i.e. products) defined with the relevant fields.
  */
-interface ImpressionTracker<T> {
+interface ListItemImpressionTracker<T> {
     /*
      * Tracker
      */
@@ -18,6 +18,16 @@ interface ImpressionTracker<T> {
      * Contains viewed items
      */
     val viewedItems: MutableSet<T>
+
+    /*
+     * Event Name
+     */
+    val eventName: String
+
+    /*
+     * Name of the list
+     */
+    val listName: String
 
     /*
      * Function to track item impression

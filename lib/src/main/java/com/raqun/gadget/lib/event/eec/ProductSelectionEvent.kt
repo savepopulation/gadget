@@ -14,7 +14,6 @@ data class ProductSelectionEvent(
     private val itemListName: String
 ) : AnalyticsEvent(), EecEvent {
 
-    // TODO put index in item list tracker implementation
     override fun toBundle(): Bundle {
         return Bundle().apply {
             put(FirebaseAnalytics.Param.ITEMS, product.toBundle())
