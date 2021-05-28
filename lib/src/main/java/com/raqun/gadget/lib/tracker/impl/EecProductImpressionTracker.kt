@@ -11,6 +11,10 @@ import com.raqun.gadget.lib.tracker.AnalyticsTracker
 import com.raqun.gadget.lib.tracker.ListItemImpressionTracker
 import com.raqun.gadget.lib.tracker.LifecycleEventTracker
 
+/*
+ * EEC Product Impression Tracker
+ * Used to track product impressions for EEC
+ */
 class EecProductImpressionTracker(
     override val lifeCycle: Lifecycle,
     override val viewedItems: LinkedHashSet<Product> = linkedSetOf(),

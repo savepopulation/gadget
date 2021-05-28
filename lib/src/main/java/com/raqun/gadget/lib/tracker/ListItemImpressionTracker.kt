@@ -3,7 +3,7 @@ package com.raqun.gadget.lib.tracker
 import androidx.arch.core.util.Function
 
 /*
- * List Item Tracker
+ * List Item Impression Tracker
  * Used for tracking impression or selection of items in a list
  * Measure product impressions by logging event with an ITEM_LIST parameter
  * and one or more items (i.e. products) defined with the relevant fields.
