@@ -2,5 +2,4 @@ apply from: "$rootDir/common-android-library.gradle"
 
 dependencies {
     implementation Libraries.firebaseAnalytics
-    implementation Libraries.googleTagManager
 }
