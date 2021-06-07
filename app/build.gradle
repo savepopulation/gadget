@@ -35,7 +35,3 @@ dependencies {
     implementation SupportLibraries.multidex
     implementation SupportLibraries.design
 }
-
-repositories {
-    google()
-}
