@@ -7,5 +7,12 @@ import com.raqun.gadget.lib.event.AnalyticsEvent
  */
 data class CustomEvent(
     override val name: String,
-    override val params: MutableMap<String, Any?> = mutableMapOf()
-) : AnalyticsEvent()
+    private val initialParams: MutableMap<String, Any?> = mutableMapOf()
+) : AnalyticsEvent() {
+
+    init {
+        if (!initialParams.isNullOrEmpty()) {
+            params.putAll(initialParams)
+        }
+    }
+}
