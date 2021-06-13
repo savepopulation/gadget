@@ -10,6 +10,6 @@ object Config {
     const val compileSdkVersion = Versions.compileSdkVersion
     const val buildToolsVersion = Versions.buildToolsVersion
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    const val versionCode = 2
-    const val versionName = "1.0.0-rc05"
+    const val versionCode = 3
+    const val versionName = "1.0.0-rc06"
 }
