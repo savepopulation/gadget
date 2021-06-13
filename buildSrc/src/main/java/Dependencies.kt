@@ -32,8 +32,11 @@ object TestLibraries {
 
 // Other
 object Libraries {
+    const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBomVersion}"
     const val firebaseAnalytics =
-        "com.google.firebase:firebase-analytics:${Versions.firebaseAnalyticsVersion}"
+        "com.google.firebase:firebase-analytics-ktx"
+    const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+    const val firebasePerformance = "com.google.firebase:firebase-perf-ktx"
     const val javaxAnnotation = "org.glassfish:javax.annotation:${Versions.javaxAnnotationVersion}"
     const val googleTagManager =
         "com.google.android.gms:play-services-tagmanager:${Versions.tagManagerVersion}"

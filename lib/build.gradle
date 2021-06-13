@@ -1,5 +1,9 @@
 apply from: "$rootDir/common-android-library.gradle"
 
 dependencies {
+    implementation Libraries.firebaseBom
     implementation Libraries.firebaseAnalytics
+    implementation Libraries.firebaseCrashlytics
+    implementation Libraries.googleTagManager
+    implementation Libraries.firebasePerformance
 }
