@@ -86,6 +86,46 @@ Gadget.track(addEvent)
 
 IF you want to change the event tracking strategy for a single event specifically **Gadget's track method** takes ```EventTracker``` as parameter and if you pass a different event tracker, your event will be tracked with that implementation.
 
+### Gadget's Google Analytics Enhanced Ecommerce Support
+Google Analytics Enhanced Ecommerce reporting allows you to collect data related to ecommerce transactions: item data, impression data, product data, promotion data, and action data. This information gives you a snapshot of your company’s health by providing an overarching view of how visitors interact with your ecommerce website. [Source and more information here](https://thegood.com/insights/google-analytics-enhanced-ecommerce/)
+
+Gadget has it's own impression trackers can be used for EEC impression tracking. You can use ```EecProductImpressionTracker``` for product impression tracking and 
+```EecPromotionImpressionTracker``` for tracking your promotions. These trackers both implements **Gadget's** ```ListItemImpressionTracker<T>``` and ```LifecycleEventTracker``` implements to handle impression tracking in a with **lifecycle events**.
+
+To add an impressions, you can use ```addImpression``` method of ```ListItemImpressionTracker```
+```KOTLIN
+    /*
+     * Function to track item impression
+     * Call when item is viewed
+     */
+    fun addImpression(item: T) {
+        viewedItems.add(item)
+    }
+
+    /*
+     * Function to track item impression with a mapper
+     * Call when item is viewed
+     */
+    fun addImpression(item: Any?, mapper: Function<Any, T>) {
+        item?.let {
+            viewedItems.add(mapper.apply(it))
+        }
+    }
+```
+
+To track an item selection, you can use ```trackItemSelection``` method of ```ListItemImpressionTracker```
+```KOTLIN
+/*
+ * Tracks selection of an item in a list
+ * Measure product clicks by logging a SELECT_CONTENT event
+ * with an item (i.e. product) defined with the relevant fields:
+ */
+ fun trackItemSelection(item: T)
+```
+
+And finally, **Gadget's** ```EecProductImpressionTracker``` will track the collected impressions ```@OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)```
+ 
+
 ### Dependency<br>
 ```
 allprojects {
@@ -100,3 +140,12 @@ allprojects {
 	        implementation 'com.github.savepopulation:gadget:1.0.0'
 	}
   ```
+  
+### Apps Using Gadget on Production
+[Phone Box](https://play.google.com/store/apps/details?id=com.raqun.phonebox)<br>
+  
+  * __Please send me an email if you're using Gaget on production and want to be in the list.__
+
+### WHere Gadget comes from?
+
+  
