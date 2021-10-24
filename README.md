@@ -1,4 +1,4 @@
-# gadget
+# Gadget
 **Gadget** is a library that aims to _make analytics event tracking_ **more reliable** and **configurable**.<br>
 
 ### Problems to solve
@@ -147,5 +147,9 @@ allprojects {
   * __Please send me an email if you're using Gaget on production and want to be in the list.__
 
 ### WHere Gadget comes from?
+![alt text](/art/gadget.jpeg)<br><br>
+[Inspector Gadget](https://en.wikipedia.org/wiki/Inspector_Gadget)<br>
+[Watch this](https://www.youtube.com/watch?v=rIc13VjeAw8)
+
 
   
