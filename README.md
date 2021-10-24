@@ -12,6 +12,6 @@ allprojects {
   ```
   ```
   dependencies {
-	        implementation 'com.github.savepopulation:gadget:1.0.0-rc06'
+	        implementation 'com.github.savepopulation:gadget:1.0.0'
 	}
   ```
