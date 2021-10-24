@@ -92,7 +92,7 @@ Google Analytics Enhanced Ecommerce reporting allows you to collect data related
 Gadget has it's own impression trackers can be used for EEC impression tracking. You can use ```EecProductImpressionTracker``` for product impression tracking and 
 ```EecPromotionImpressionTracker``` for tracking your promotions. These trackers both implements **Gadget's** ```ListItemImpressionTracker<T>``` and ```LifecycleEventTracker``` implements to handle impression tracking in a with **lifecycle events**.
 
-To add an impressions, you can use ```addImpression``` method of ```ListItemImpressionTracker```
+To collect the impressions, you can use ```addImpression``` method of ```ListItemImpressionTracker```
 ```KOTLIN
     /*
      * Function to track item impression
@@ -124,7 +124,8 @@ To track an item selection, you can use ```trackItemSelection``` method of ```Li
 ```
 
 And finally, **Gadget's** ```EecProductImpressionTracker``` will track the collected impressions ```@OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)```
- 
+
+**Note:** You can notice that there're some out dated classes and implementations for **EEC support**. **Google Analytics 4 migration** is still on going and i'm trying to understand and replace these deprecated classes with the GA 4 implementations.
 
 ### Dependency<br>
 ```
