@@ -14,16 +14,12 @@ import com.raqun.gadget.lib.extensions.toBundleList
  */
 data class BeginCheckoutEvent(
     override val name: String = FirebaseAnalytics.Event.BEGIN_CHECKOUT,
-    private val products: List<Product>,
-    private val checkoutStep: Long = 1,
-    private val checkoutOption: String? = null
+    private val products: List<Product>
 ) : AnalyticsEvent(), EecEvent {
 
     override fun toBundle(): Bundle {
         return Bundle().apply {
             putParcelableArrayList(FirebaseAnalytics.Param.ITEMS, products.toBundleList())
-            put(FirebaseAnalytics.Param.CHECKOUT_STEP, checkoutStep)
-            put(FirebaseAnalytics.Param.CHECKOUT_OPTION, checkoutOption)
         }
     }
 }
