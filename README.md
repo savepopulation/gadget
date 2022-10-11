@@ -138,7 +138,7 @@ allprojects {
   ```
   ```
   dependencies {
-	        implementation 'com.github.savepopulation:gadget:1.0.0'
+	        implementation 'com.github.savepopulation:gadget:1.0.2'
 	}
   ```
   
