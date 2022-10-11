@@ -45,8 +45,8 @@ object Versions {
     /*
      * Firebase Versions
      */
-    const val firebaseBomVersion = "28.1.0"
-    const val tagManagerVersion = "16.0.8"
+    const val firebaseBomVersion = "30.5.0"
+    const val tagManagerVersion = "18.0.2"
 
     /*
      * Plugin Versions
